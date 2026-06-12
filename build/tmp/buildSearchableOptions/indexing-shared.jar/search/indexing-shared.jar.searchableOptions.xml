@@ -1,0 +1,10 @@
+<options>
+  <configurable id="shared-indexes" configurable_name="Shared Indexes">
+    <option name="jdks" hit="JDKs:" />
+    <option name="indexes" hit="Public Shared Indexes" />
+    <option name="public" hit="Public Shared Indexes" />
+    <option name="shared" hit="Public Shared Indexes" />
+    <option name="indexes" hit="Shared Indexes" />
+    <option name="shared" hit="Shared Indexes" />
+  </configurable>
+</options>

@@ -1,0 +1,31 @@
+<idea-plugin>
+    <id>cn.minmetals.hcm.pm.plugin.code-translation</id>
+    <name>Code Translation Helper</name>
+    <vendor>Minmetals HCM PM Team</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Tool Window -->
+        <toolWindow
+            id="Code Translation"
+            anchor="right"
+            icon="AllIcons.Actions.Diff"
+            factoryClass="cn.minmetals.hcm.pm.plugin.codetrans.CodeTranslationToolWindowFactory"/>
+
+        <!-- Project-level settings -->
+        <projectService
+            serviceImplementation="cn.minmetals.hcm.pm.plugin.codetrans.TranslationSettings"/>
+
+        <!-- Project-level configurable -->
+        <projectConfigurable
+            parentId="tools"
+            instance="cn.minmetals.hcm.pm.plugin.codetrans.TranslationConfigurable"
+            id="cn.minmetals.hcm.pm.plugin.codetrans.configurable"
+            displayName="Code Translation"/>
+
+        <!-- 通知组：拷贝结果 / 校验提示 -->
+        <notificationGroup id="Code Translation" displayType="BALLOON"/>
+    </extensions>
+</idea-plugin>

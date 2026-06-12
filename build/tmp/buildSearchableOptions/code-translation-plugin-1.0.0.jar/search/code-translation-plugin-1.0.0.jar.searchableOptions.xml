@@ -1,0 +1,20 @@
+<options>
+  <configurable id="cn.minmetals.hcm.pm.plugin.codetrans.configurable" configurable_name="Code Translation">
+    <option name="扫描规则" hit="    " />
+    <option name="源码路径" hit="    " />
+    <option name="忽略目录" hit="          :" />
+    <option name="文件后缀" hit="          :" />
+    <option name="逗号分隔" hit="          :" />
+    <option name="可写" hit="        :" />
+    <option name="目标目录" hit="        :" />
+    <option name="只读" hit="       :" />
+    <option name="源目录" hit="       :" />
+    <option name="glob" hit="      glob         :" />
+    <option name="可空" hit="      glob         :" />
+    <option name="忽略文件名" hit="      glob         :" />
+    <option name="逗号分隔" hit="      glob         :" />
+    <option name="最大文件数" hit="     :" />
+    <option name="code" hit="Code Translation" />
+    <option name="translation" hit="Code Translation" />
+  </configurable>
+</options>

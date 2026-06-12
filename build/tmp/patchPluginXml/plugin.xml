@@ -1,0 +1,25 @@
+<idea-plugin>
+  <idea-version since-build="233" />
+  <change-notes><![CDATA[初始版本：基础文件对比与合并功能]]></change-notes>
+  <description><![CDATA[代码平移助手：将只读源码目录中的文件与目标项目对比，支持手动合并。
+- 配置源目录（只读）和目标目录（可写）
+- 工具窗口展示文件差异状态
+- 双击打开只读源 vs 可编辑目标的 Diff 视图
+- 支持单文件拷贝、逐块合并]]></description>
+  <version>1.0.0</version>
+  <id>cn.minmetals.hcm.pm.plugin.code-translation</id>
+  <name>Code Translation Helper</name>
+  <vendor>Minmetals HCM PM Team</vendor>
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.java</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Tool Window -->
+    <toolWindow id="Code Translation" anchor="right" icon="AllIcons.Actions.Diff" factoryClass="cn.minmetals.hcm.pm.plugin.codetrans.CodeTranslationToolWindowFactory" />
+    <!-- Project-level settings -->
+    <projectService serviceImplementation="cn.minmetals.hcm.pm.plugin.codetrans.TranslationSettings" />
+    <!-- Project-level configurable -->
+    <projectConfigurable parentId="tools" instance="cn.minmetals.hcm.pm.plugin.codetrans.TranslationConfigurable" id="cn.minmetals.hcm.pm.plugin.codetrans.configurable" displayName="Code Translation" />
+    <!-- 通知组：拷贝结果 / 校验提示 -->
+    <notificationGroup id="Code Translation" displayType="BALLOON" />
+  </extensions>
+</idea-plugin>
