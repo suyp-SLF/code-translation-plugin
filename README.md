@@ -41,7 +41,7 @@ cd code-translation-plugin
 | 最大文件数 | 限制扫描量 | `500` |
 | 忽略目录 | 跳过的目录 | `.git,.idea,target` |
 
-### 3. 使用
+### 3. 使用，可直接下载插件安装
 
 1. 右侧打开 **Code Translation** 工具窗口
 2. 点击 **刷新** 扫描文件
