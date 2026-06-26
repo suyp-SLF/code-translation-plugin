@@ -92,8 +92,6 @@ object DiffViewer {
     }
 
     private fun findOrRefresh(file: File): VirtualFile? {
-        val vf = LocalFileSystem.getInstance().refreshAndFindFileByIoFile(file) ?: return null
-        vf.refresh(false, false)
-        return vf
+        return LocalFileSystem.getInstance().refreshAndFindFileByIoFile(file)
     }
 }
